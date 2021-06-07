@@ -40,8 +40,11 @@ BLUE: Maria
  6. Started:
 
   I. created a github repository.
+
   II. created a html index file with basic html and CSS.
+
   III. added space background image.
+  
   IV. created 3 js files: character, game, grid.
 
   -------------------------------------------------
