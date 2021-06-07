@@ -9,9 +9,13 @@ For work done so far:
 1. Description of color labels:
 
 GREEN : done!
-PINK: On going.
+
+PINK: On going
+
 RED: To be done
+
 ORANGE: Gary
+
 BLUE: Maria
 
 -------------------------
@@ -44,7 +48,7 @@ BLUE: Maria
   II. created a html index file with basic html and CSS.
 
   III. added space background image.
-  
+
   IV. created 3 js files: character, game, grid.
 
   -------------------------------------------------
