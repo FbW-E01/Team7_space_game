@@ -30,6 +30,7 @@ BLUE: Maria
 ---------------------------------
 
 4. Discussing different approaches to project: browser or console visuals.
+
  ----------------------------------
 
  5. Decided for a space worm game, customized classic game.
@@ -37,6 +38,7 @@ BLUE: Maria
  ------------------------------------------------------
 
  6. Started:
+
   I. created a github repository.
   II. created a html index file with basic html and CSS.
   III. added space background image.
