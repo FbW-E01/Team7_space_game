@@ -21,11 +21,11 @@ BLUE: Maria
  -------------------------
  3. BRAINSTORMING:
   
-  1.Role play type of game.
+  i. Role play type of game.
   
-  2. visual, use of emojis and ASCII for food, locations,...
+  ii. visual, use of emojis and ASCII for food, locations,...
   
-  3. character goes from A to Z, how, stops, recharge, instructions, storyline....
+  iii. character goes from A to Z, how, stops, recharge, instructions, storyline....
 
 ---------------------------------
 
