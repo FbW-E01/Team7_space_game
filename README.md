@@ -1,1 +1,5 @@
-hello, we are just starting to set it up.
+
+For work done so far:
+
+---> see daily screenshots for update
+
