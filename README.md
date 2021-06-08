@@ -31,9 +31,9 @@ BLUE: Maria
   
   iii. character goes from A to Z, how, stops, recharge, instructions, storyline....
 
----------------------------------
+ ---------------------------------
 
-4. Discussing different approaches to project: browser or console visuals.
+ 4. Discussing different approaches to project: browser or console visuals.
 
  ----------------------------------
 
