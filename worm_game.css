@@ -6,7 +6,7 @@ body {
   /* GAME BOARD STYLES */
   #gameBox {
     /*
-      width and height of .gameBoardPixel should 1/40 of the width and height of #gameContainer,
+      width and height of .gameBoardPixel should 1/40 of the width and height of #gameBox,
       because it is used in calculation in the .js file
       */
     width: 40vw;
@@ -24,7 +24,7 @@ body {
   .gameBoard {
     /* background-color: slategrey; */
     /*
-      width and height of .gameBoardPixel should 1/40 of the width and height of #gameContainer,
+      width and height of .gameBoard should 1/40 of the width and height of #gameBox,
       because it is used in calculation in the jscript.js file
       */
     width: 1vw;
@@ -34,12 +34,12 @@ body {
   }
   /* GAME BOARD STYLES END*/
   
-  /* SNAKE STYLES */
+  /* WORM STYLES */
   .wormBodyPixel {
     background-color: #fd6401;
     box-shadow: 0 0 5px #fd6401;
   }
-  /* SNAKE STYLES END*/
+  /* SPACE WORM STYLES END*/
   
   /* FOOD STYLES */
   .food {
