@@ -13,3 +13,4 @@ const gameBoard = () => {
 };
 
 const gameBoard = document.getElementsByClassName("gameBoard");
+
