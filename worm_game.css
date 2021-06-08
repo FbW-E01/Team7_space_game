@@ -7,7 +7,7 @@ body {
   #gameBox {
     /*
       width and height of .gameBoardPixel should 1/40 of the width and height of #gameContainer,
-      because it is used in calculation in the jscript.js file
+      because it is used in calculation in the .js file
       */
     width: 40vw;
     height: 40vw;
@@ -35,7 +35,7 @@ body {
   /* GAME BOARD STYLES END*/
   
   /* SNAKE STYLES */
-  .snakeBodyPixel {
+  .wormBodyPixel {
     background-color: #fd6401;
     box-shadow: 0 0 5px #fd6401;
   }
