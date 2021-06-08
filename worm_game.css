@@ -4,7 +4,7 @@ body {
   }
   
   /* GAME BOARD STYLES */
-  #gameContainer {
+  #gameBox {
     /*
       width and height of .gameBoardPixel should 1/40 of the width and height of #gameContainer,
       because it is used in calculation in the jscript.js file
@@ -21,7 +21,7 @@ body {
     box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
   }
   
-  .gameBoardPixel {
+  .gameBoard {
     /* background-color: slategrey; */
     /*
       width and height of .gameBoardPixel should 1/40 of the width and height of #gameContainer,
