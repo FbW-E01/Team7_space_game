@@ -52,3 +52,17 @@ BLUE: Maria
   IV. created 3 js files: character, game, grid.
 
   -------------------------------------------------
+
+8th JUNE
+--------
+
+game_board.js (game grid)   --->  GARY
+
+food.js  ---> MARIA
+
+space_worm.js (character direction, movement, )  ---> MARIA
+
+game.js  (score (2 lines) + code to start game) ----> GARY
+
+
+
