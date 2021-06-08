@@ -79,7 +79,7 @@ const  moveWorm  = () => {
     // If not killed add the worm body:
     nextWormHeadPixel.classList.add("wormBodyPixel");
 
-    // This fuction removes the snake body from the end of the worm as it moves.
+    // This function removes the space worm body from the end of the worm as it moves.
     // Also note that space worm Length is used as the timeout interval
     setTimeout(() => {
         nextWormHeadPixel.classList.remove("wormBodyPixel");
