@@ -71,13 +71,14 @@ game.js  (score (2 lines) + code to start game) ----> GARY
 work done on the files so far:
 _***************************_
 MARIA:
-------
-food.js: 
----------
-a function that adds or removes and repositions (adds again) food in the game board randomly. Original food position is set to 0.
 
-space_worms.js : 
---------------
+    food.js: 
+    ---------
+
+    A function that adds or removes and repositions (adds again) food in the game board randomly. Original food position is set to 0.
+
+    space_worms.js : 
+    --------------
 
     1. declared the directions of the space worm in the board, by assigning keyboard arrow keys.
 
@@ -93,7 +94,7 @@ space_worms.js :
 
     7. space worm Length is used as the timeout interval
 
-    8. updateb the distance travelled
+    8. updated the distance travelled
     
     9. link to html visual when/if space worm eats food (head of worm hits food item) then food is added and new food position is created.
 
