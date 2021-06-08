@@ -6,5 +6,5 @@ const  createFood  = () => {
     // Create new food
     currentFoodPlace =  Math.random();
     currentFoodPlace =  Math.floor(currentFoodPlace  *  1600);
-    gameBox[currentFoodPostion].classList.add("food"); //--> in this case to add class
+    gameBox[currentFoodPlace].classList.add("food"); //--> in this case to add class
 };

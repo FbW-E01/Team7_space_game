@@ -1,4 +1,4 @@
-// Direction of space worm
+// Direction of space worm in the game board
 
 // Direction codes (Keyboard key codes for arrow keys):
 const  left_direction =  37;
@@ -6,12 +6,12 @@ const  up_direction  =  38;
 const  right_direction  =  39;
 const  down_direction  =  40;
 
-// Set snake direction initially to right
+// Set space worm direction initially to right
 let  wormCurrentDirection  =  right_direction;
 
 const  changeDirection  =  newDirectionCode  => {
-    // Change the direction of the snake
-    if (newDirectionCode  ==  wormCurrentDirection) return; // if new direction is same a current, stop
+    // Change the direction of the space worm
+    if (newDirectionCode  ==  wormCurrentDirection) return; 
     if (newDirectionCode  ==  left_direction  &&  wormCurrentDirection  != right_direction) {
         wormCurrentDirection  =  newDirectionCode;
     } else  if (newDirectionCode  ==  up_direction  &&  wormCurrentDirection  !=  down_direction) {
@@ -28,7 +28,7 @@ const  changeDirection  =  newDirectionCode  => {
 let  currentWormHeadPlace  =  799;
 let  wormLength  =  1000; // Initial length of the space worm = 1000
 
-// Move space worm continously by calling this function repeatedly :
+// Move space worm continuously by calling this function repeatedly :
 const  moveWorm  = () => {
     switch (wormCurrentDirection) {
         case  left_direction:
@@ -41,7 +41,7 @@ const  moveWorm  = () => {
 
         case  up_direction:
             currentWormHeadPlace  =  currentWormHeadPlace  -  40;
-            const  isSnakeHeadAtLastGameBoardPixelTowardsUp  = currentSnakeHeadPosition  <  0;
+            const  isWormHeadAtLastGameBoardTowardsUp  = currentWormHeadPlace  <  0;
             if (isWormHeadAtLastGameBoardTowardsUp) {
                 currentWormHeadPlace  =  currentWormHeadPlace  +  1600;
             }
@@ -79,25 +79,25 @@ const  moveWorm  = () => {
     // If not killed add the worm body:
     nextWormHeadPixel.classList.add("wormBodyPixel");
 
-    // This fuction removes the snake body from the end of the snake as it moves.
-    // Also note that snakeLength is used as the timeout interval
+    // This function removes the space worm body from the end of the worm as it moves.
+    // Also note that space worm Length is used as the timeout interval
     setTimeout(() => {
-        nextSnakeHeadPixel.classList.remove("snakeBodyPixel");
-    }, snakeLength);
+        nextWormHeadPixel.classList.remove("wormBodyPixel");
+    }, wormLength);
 
     // Update total distance travelled
     totalDistanceTravelled++;
     // Update in UI:
     document.getElementById("blocksTravelled").innerHTML  = totalDistanceTravelled;
 
-    // If snike bites the food:
-    if (currentSnakeHeadPosition  ==  currentFoodPostion) {
+    // If space worm bites the food:
+    if (currentWormHeadPlace   ==  currentFoodPlace) {
         // Update total food ate
         totalFoodAte++;
         // Update in UI:
         document.getElementById("pointsEarned").innerHTML  =  totalFoodAte;
-        // Increase Snake length:
-        snakeLength  =  snakeLength  +  100;
+        // Increase Space worm length:
+        wormLength  =  wormLength  +  100;
         // Create new food:
         createFood();
     }
