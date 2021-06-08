@@ -69,7 +69,9 @@ game.js  (score (2 lines) + code to start game) ----> GARY
 ------------------------
 
 work done on the files so far:
+
 _***************************_
+
 MARIA:
 
     food.js: 
