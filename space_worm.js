@@ -33,51 +33,51 @@ const  moveWorm  = () => {
     switch (wormCurrentDirection) {
         case  left_direction:
             --currentWormHeadPlace;
-            const  isSnakeHeadAtLastGameBoardPixelTowardsLeft  = currentSnakeHeadPosition  %  40  ==  39  ||  currentSnakeHeadPosition  <  0;
-            if (isSnakeHeadAtLastGameBoardPixelTowardsLeft) {
-                currentSnakeHeadPosition  =  currentSnakeHeadPosition  +  40;
+            const  isWormHeadAtLastGameBoardTowardsLeft  = currentWormHeadPlace  %  40  ==  39  ||  currentWormHeadPlace  <  0;
+            if (isWormHeadAtLastGameBoardTowardsLeft) {
+                currentWormHeadPlace  =  currentWormHeadPlace  +  40;
             }
             break;
 
-        case  UP_DIR:
-            currentSnakeHeadPosition  =  currentSnakeHeadPosition  -  40;
+        case  up_direction:
+            currentWormHeadPlace  =  currentWormHeadPlace  -  40;
             const  isSnakeHeadAtLastGameBoardPixelTowardsUp  = currentSnakeHeadPosition  <  0;
-            if (isSnakeHeadAtLastGameBoardPixelTowardsUp) {
-                currentSnakeHeadPosition  =  currentSnakeHeadPosition  +  1600;
+            if (isWormHeadAtLastGameBoardTowardsUp) {
+                currentWormHeadPlace  =  currentWormHeadPlace  +  1600;
             }
             break;
 
-        case  RIGHT_DIR:
-            ++currentSnakeHeadPosition;
-            const  isSnakeHeadAtLastGameBoardPixelTowardsRight  = currentSnakeHeadPosition  %  40  ==  0;
-            if (isSnakeHeadAtLastGameBoardPixelTowardsRight) {
-                currentSnakeHeadPosition  =  currentSnakeHeadPosition  -  40;
+        case  right_direction :
+            ++currentWormHeadPlace;
+            const  isWormHeadAtLastGameBoardTowardsRight  = currentWormHeadPlace  %  40  ==  0;
+            if (isWormHeadAtLastGameBoardTowardsRight) {
+                currentWormHeadPlace  =  currentWormHeadPlace  -  40;
             }
             break;
 
-        case  DOWN_DIR:
-            currentSnakeHeadPosition  =  currentSnakeHeadPosition  +  40;
-            const  isSnakeHeadAtLastGameBoardPixelTowardsDown  = currentSnakeHeadPosition  >  1599;
-            if (isSnakeHeadAtLastGameBoardPixelTowardsDown) {
-                currentSnakeHeadPosition  =  currentSnakeHeadPosition  -  1600;
+        case  down_direction:
+            currentWormHeadPlace  =  currentWormHeadPlace  +  40;
+            const  isWormHeadAtLastGameBoardTowardsDown  = currentWormHeadPlace  >  1599;
+            if (isWormHeadAtLastGameBoardTowardsDown) {
+                currentWormHeadPlace  =  currentWormHeadPlace  -  1600;
             }
             break;
 
         default:
             break;
     }
-    let  nextSnakeHeadPixel  = gameBoardPixels[currentSnakeHeadPosition];
+    let  nextWormHeadPixel  = gameBox[currentWormHeadPlace];
 
-    // Kill snake if it bites itself:
-    if (nextSnakeHeadPixel.classList.contains("snakeBodyPixel")) {
-        // Stop moving the snake
-        clearInterval(moveSnakeInterval);
+    // Kill worm if it bites itself:
+    if (nextWormHeadPixel.classList.contains("wormBodyPixel")) {
+        // Stop moving the space Worm
+        clearInterval(moveWormInterval);
         if (!alert(`You have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`))
         window.location.reload();
     }
 
-    // If not killed add the snake body:
-    nextSnakeHeadPixel.classList.add("snakeBodyPixel");
+    // If not killed add the worm body:
+    nextWormHeadPixel.classList.add("wormBodyPixel");
 
     // This fuction removes the snake body from the end of the snake as it moves.
     // Also note that snakeLength is used as the timeout interval

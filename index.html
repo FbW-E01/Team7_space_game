@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,27 +17,42 @@
 <body>
      <!-- #gameContainer is the main game board-->
      <div id="gameBox"></div>
+=======
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Space Worm</title>
+        <!-- Link our styles from snake_game.css -->
+        <link rel="stylesheet" type="text/css" href="/worm_game.css"/>
+>>>>>>> 525dc01ab0c4c80d8135b668e8636821bc15a364
 
-     <!-- #scoreContainer contains the scores  -->
-     <div id="scoreContainer">
-       <div class="scoreBoard">Food: <span id="pointsEarned">0</span></div>
-       <div class="scoreBoard">Blocks: <span id="blocksTravelled">0</span></div>
-     </div>
- 
-     <!-- #onScreenControllers contains the navigation buttons for mobile screens -->
-     <div id="onScreenControllers">
-       <button id="leftButton">◀️</button>
-       <div>
-         <button id="upButton">🔼</button>
-         <button id="downButton">🔽</button>
-       </div>
-       <button id="rightButton">▶️</button>
-     </div>
-   </body>
- 
+        <script defer src="/game.js"></script>
+        <script defer src="/food.js"></script>
+        <script defer src="/space_worm.js"></script>
+        <script defer src="/game_board.js"></script>
+    </head>
+    <body>
+        <!-- #gameContainer is the main game board-->
+        <div id="gameBox"></div>
+        <!-- #scoreContainer contains the scores  -->
+        <div id="scoreContainer">
+        <div class="scoreBoard">Food: <span id="pointsEarned">0</span></div>
+        <div class="scoreBoard">Blocks: <span id="blocksTravelled">0</span></div>
+        </div>
 
-  <!-- #Load our .js files containing the game logic -->
+        <!-- #onScreenControllers contains the navigation buttons for mobile screens -->
+        <div id="onScreenControllers">
+        <button id="leftButton">:arrow_backward:</button>
+        <div>
+            <button id="upButton">:arrow_up_small:</button>
+            <button id="downButton">:arrow_down_small:</button>
+        </div>
+        <button id="rightButton">:arrow_forward:</button>
+        </div>
+    </body>
 
-
-  
-</html>
+    <!-- #Load our .js files containing the game logic -->
+    </html>
