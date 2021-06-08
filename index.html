@@ -1,46 +1,50 @@
-><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Worm</title>
-    <style>
-body {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    background-color: black;
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <html>
+        <head lang="en">
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width,initial-scale=1" />
+            <title>Snake v8</title>
+            <!-- Link our styles from snake_game.css -->
+            <link rel="stylesheet" type="text/css" href="/worm_game.css"/>
+        <script defer src="/game.js"></script>
+        <script defer src="/food.js"></script>
+        <script defer src="/space_worm.js"></script>
+        <script defer src="/game_board.js"></script
+        </head>
+        <body>
+            <!-- #gameContainer is the main game board-->
+            <div id="gameBox"></div>
 
-}
+            <!-- #scoreContainer contains the scores  -->
+            <div id="scoreContainer">
+            <div class="scoreBoard">Food: <span id="points">0</span></div>
+            <div class="scoreBoard">
+                Blocks: <span id="blocksTravelled">0</span>
+            </div>
+            </div>
 
-#game-background {
-    background-image: url(/images/space_background.jpg);
-    width: 100vmin;
-    height: 100vmin;
-    display: grid;
-    grid-template-rows: repeat(21, 1fr);
-    grid-template-columns: repeat(21, 1fr);
-}
+            <!-- #onScreenControllers contains the navigation buttons for mobile screens -->
+            <div id="screenControllers">
+            <button id="leftButton">◀️</button>
+            <div>
+                <button id="upButton">🔼</button>
+                <button id="downButton">🔽</button>
+            </div>
+            <button id="rightButton">▶️</button>
+            </div>
+        </body>
 
-.snake {
-    background-color: hsl(200, 100%, 50%);
-    border: .25vmin solid black;
-}
+        <!-- #Load our snake_game.js containing the game logic -->
+        </html>
+    </body>
 
-.food {
-    background-color: hsl(50, 100%, 50%);
-    border: .25vmin solid black;
-
-}
- </style>
- <script src="/game.js" defer type="module"></script>
- </head>
-<body>
-    <div id="game-background"></div>
-    
-</body>
-</html>
+    </html>
