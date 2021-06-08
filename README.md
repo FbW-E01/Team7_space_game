@@ -37,7 +37,7 @@ BLUE: Maria
 
  ----------------------------------
 
- 5. Decided for a space worm game, customized classic game.
+ 5. Decided for a space worm game, customized version of the classic snake game.
 
  ------------------------------------------------------
 
