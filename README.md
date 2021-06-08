@@ -69,9 +69,9 @@ game.js  (score (2 lines) + code to start game) ----> GARY
 ------------------------
 
 work done on the files so far:
-
+_***************************_
 MARIA:
-*****
+------
 food.js: 
 ---------
 a function that adds or removes and repositions (adds again) food in the game board randomly. Original food position is set to 0.
