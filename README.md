@@ -86,7 +86,7 @@ MARIA:
 
     2. set initial space worm location
 
-    3.function to change the direction of space worm with "if" and "if else" statements
+    3. function to change the direction of space worm with "if" and "if else" statements
 
     4. set the starting position of the space worm to the center
 

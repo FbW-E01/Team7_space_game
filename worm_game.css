@@ -9,8 +9,8 @@ body {
       width and height of .gameBoardPixel should 1/40 of the width and height of #gameBox,
       because it is used in calculation in the .js file
       */
-    width: 80vw;
-    height: 45vw;
+    width: 40vw;
+    height: 40vw;
     margin: 2vw auto;
     background-color: #0c1021;
     border: solid 10px slategrey;
