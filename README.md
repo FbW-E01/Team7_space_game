@@ -112,23 +112,25 @@ MARIA:
 
 * merged food.js and game_board.js. Current files game_board.js, game.js, space_worm.js
 
-*  1* title banner. 
+*  1* title banner. done, to be reviewed
 
-   2* change color scheme 
+   2* change color scheme --> done, to be reviewed
 
    3* move score boards 
    
-   4* change alert messages.
+   4* change alert messages. --> some done, more to be added
    
-   5* slow down perhaps. 
+   5* slow down perhaps. --> done 
    
-   6* expand screen ? ---> not 
+   6* expand screen ? ---> not working
    
    7* update trello screenshot and markdown in github
    
    8* change food or/and worm visuals (perhaps emojis, different food types?)
    
    9* maybe obstacles -collision MAYBE
+
+   10* added favicon green worm  --> done
 
    ------------------
 
@@ -144,6 +146,7 @@ MARIA:
    
    iv. You need more Cake
 
+   v. you have eaten X space cakes by travelling X light years
    ------------------------------
 
    bugs we found:
