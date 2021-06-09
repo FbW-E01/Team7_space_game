@@ -3,9 +3,9 @@ makeGameBoard();
 createFood();
 
 
-let moveWormInterval = setInterval(moveWorm, 80);
+let moveWormInterval = setInterval(moveWorm, 40);
 
-addEventListener("press keydown", e => changeDirection(e.keycode));
+addEventListener("keydown", e => changeDirection(e.keycode));
 
 // Control function //
 
@@ -14,10 +14,10 @@ const rightButton = document.getElementById("rightButton");
 const upButton = document.getElementById("upButton");
 const downButton = document.getElementById("downButton");
 
-leftButton.onclick = () => changeDirection(left_direction);
-rightButton.onclick = () => changeDirection(right_direction);
-upButton.onclick = () => changeDirection(up_direction);
-downButton.onclick = () => changeDirection(down_direction);
+leftButton.onclick = () => changeDirection (left_direction);
+rightButton.onclick = () => changeDirection (right_direction);
+upButton.onclick = () => changeDirection (up_direction);
+downButton.onclick = () => changeDirection (down_direction);
 
 /// CALL THE FOLLOWING FUNCTIONS TO RUN THE GAME:
 

@@ -9,70 +9,71 @@ const  down_direction  =  40;
 // Set space worm direction initially to right
 let  wormCurrentDirection  =  right_direction;
 
-const  changeDirection  =  newDirectionCode  => {
+const  changeDirection  =  newDirection  => {
     // Change the direction of the space worm
-    if (newDirectionCode  ==  wormCurrentDirection) return; 
-    if (newDirectionCode  ==  left_direction  &&  wormCurrentDirection  != right_direction) {
-        wormCurrentDirection  =  newDirectionCode;
-    } else  if (newDirectionCode  ==  up_direction  &&  wormCurrentDirection  !=  down_direction) {
-        wormCurrentDirection  =  newDirectionCode;
-    } else  if (newDirectionCode  ==  right_direction  && wormCurrentDirection  !=  left_direction) {
-        wormCurrentDirection  =  newDirectionCode;
-    } else  if (newDirectionCode  ==  down_direction  &&  wormCurrentDirection  !=  up_direction) {
-        wormCurrentDirection  =  newDirectionCode;
+    if (newDirection  ==  wormCurrentDirection) return; 
+    if (newDirection  ==  left_direction  &&  wormCurrentDirection  != right_direction) {
+        wormCurrentDirection  =  newDirection;
+    } else  if (newDirection  ==  up_direction  &&  wormCurrentDirection  !=  down_direction) {
+        wormCurrentDirection  =  newDirection;
+    } else  if (newDirection ==  right_direction  && wormCurrentDirection  !=  left_direction) {
+        wormCurrentDirection  =  newDirection;
+    } else  if (newDirection  ==  down_direction  &&  wormCurrentDirection  !=  up_direction) {
+        wormCurrentDirection  =  newDirection;
     }
 };
 
 
 // Let the starting position of the space worm be at the middle of game board
 let  currentWormHeadPlace  =  squareGameBoardCount / 2;
-let  wormLength  =  1000; // Initial length of the space worm = 1000
+
+let  wormLength  =  500; // Initial length of the space worm = 1000
 
 // Move space worm continuously by calling this function repeatedly:
 const  moveWorm  = () => {
     switch (wormCurrentDirection) {
         case  left_direction:
             --currentWormHeadPlace;
-            const  isWormHeadAtLastGameBoardTowardsLeft =  currentWormHeadPlace % gameBoardCount == gameBoardCount - 1 ||  currentWormHeadPlace  <  0;
+            const  isWormHeadAtLastGameBoardTowardsLeft = currentWormHeadPlace % gameBoardCount == gameBoardCount - 1 ||  currentWormHeadPlace  <  0;
             if (isWormHeadAtLastGameBoardTowardsLeft) {
-                currentWormHeadPlace  =  currentWormHeadPlace  + gameBoardCount; 
+                currentWormHeadPlace = currentWormHeadPlace + gameBoardCount; 
             }
             break;
 
         case  up_direction:
-            currentWormHeadPlace  =  currentWormHeadPlace  -  gameBoardCount; 
-            const  isWormHeadAtLastGameBoardTowardsUp  = currentWormHeadPlace  <  0;
+            currentWormHeadPlace = currentWormHeadPlace - gameBoardCount; 
+            const  isWormHeadAtLastGameBoardTowardsUp = currentWormHeadPlace  <  0;
             if (isWormHeadAtLastGameBoardTowardsUp) {
-                currentWormHeadPlace  =  currentWormHeadPlace  +  gameBoardCount;
+                currentWormHeadPlace = currentWormHeadPlace + gameBoardCount;
             }
             break;
 
         case  right_direction :
             ++currentWormHeadPlace;
-            const  isWormHeadAtLastGameBoardTowardsRight  = currentWormHeadPlace  %  gameBoardCount  ==  0;
+            const  isWormHeadAtLastGameBoardTowardsRight = currentWormHeadPlace % gameBoardCount == 0;
             if (isWormHeadAtLastGameBoardTowardsRight) {
-                currentWormHeadPlace  =  currentWormHeadPlace  -  gameBoardCount;
+                currentWormHeadPlace = currentWormHeadPlace - gameBoardCount;
             }
             break;
 
         case  down_direction:
-            currentWormHeadPlace  =  currentWormHeadPlace  +  gameBoardCount;
-            const  isWormHeadAtLastGameBoardTowardsDown  = currentWormHeadPlace  >  squareGameBoardCount - 1;
+            currentWormHeadPlace = currentWormHeadPlace + gameBoardCount;
+            const  isWormHeadAtLastGameBoardTowardsDown = currentWormHeadPlace > squareGameBoardCount - 1;
             if (isWormHeadAtLastGameBoardTowardsDown) {
-                currentWormHeadPlace  =  currentWormHeadPlace  -  squareGameBoardCount;
+                currentWormHeadPlace = currentWormHeadPlace - squareGameBoardCount;
             }
             break;
 
         default:
             break;
     }
-    let  nextWormHeadPixel  = gameBox[currentWormHeadPlace];
+    let  nextWormHeadPixel  = gameBoard[currentWormHeadPlace];
 
     // Kill worm if it touches/bites itself:
     if (nextWormHeadPixel.classList.contains("wormBody")) {
         // Stop moving the space Worm. Use clearInterval() to stop the time
         clearInterval(moveWormInterval); 
-        if (!alert(`You have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`))
+        if (!alert(`You have ate ${foodEaten} food by travelling ${distanceTravelled} blocks.`))
         window.location.reload();
     }
 
@@ -86,16 +87,16 @@ const  moveWorm  = () => {
     }, wormLength);
 
     // Update total distance travelled
-    totalDistanceTravelled++;
+    distanceTravelled++;
     // Update in UI/screen:change the HTML content of total distance travelled, with id="blocksTravelled":
-    document.getElementById("blocksTravelled").innerHTML  = totalDistanceTravelled; 
+    document.getElementById("blocksTravelled").innerHTML  = distanceTravelled; 
 
-    // If space worm bites the food /sohead and food are at the same place):
+    // If space worm bites the food /so head and food are at the same place):
     if (currentWormHeadPlace   ==  currentFoodPlace) {
         // Update total food ate
-        totalFoodAte++;
+        foodEaten++;
         // Update in screen/UI: change the HTML content of total food eaten, with id="pointsEarned":
-        document.getElementById("pointsEarned").innerHTML  =  totalFoodAte;
+        document.getElementById("pointsEarned").innerHTML  =  foodEaten;
         // Increase Space worm length:
         wormLength  =  wormLength  +  100;
         // Create new food:
