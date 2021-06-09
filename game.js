@@ -4,7 +4,7 @@ makeGameBoard();
 createFood();
 
 
-let moveWormInterval = setInterval(moveWorm, 100);
+let moveWormInterval = setInterval(moveWorm, 60);
 
 
 const checkKey = e => changeDirection(e.keyCode);
