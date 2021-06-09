@@ -1,3 +1,4 @@
+/// CALL THE FOLLOWING FUNCTIONS TO RUN THE GAME:
 makeGameBoard();
 
 createFood();
@@ -5,7 +6,9 @@ createFood();
 
 let moveWormInterval = setInterval(moveWorm, 40);
 
-addEventListener("keydown", e => changeDirection(e.keycode));
+
+const checkKey = e => changeDirection(e.keyCode);
+document.onkeydown = checkKey;
 
 // Control function //
 
@@ -18,11 +21,5 @@ leftButton.onclick = () => changeDirection (left_direction);
 rightButton.onclick = () => changeDirection (right_direction);
 upButton.onclick = () => changeDirection (up_direction);
 downButton.onclick = () => changeDirection (down_direction);
-
-/// CALL THE FOLLOWING FUNCTIONS TO RUN THE GAME:
-
-// Create game board pixels:
-
-
 
 

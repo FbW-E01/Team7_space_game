@@ -1,3 +1,5 @@
+// Create game board pixels:
+
 const gameBoardCount = 40;
 const squareGameBoardCount = Math.pow(gameBoardCount, 2);
 
@@ -32,5 +34,9 @@ const createFood = () => {
   );
   gameBoard[currentFoodPlace].classList.add("food"); //--> in this case to add "food"
 };
+
+
+
+
 
 

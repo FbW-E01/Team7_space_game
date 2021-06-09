@@ -1,5 +1,3 @@
-// Direction of space worm in the game board
-
 // Direction codes (Keyboard key codes for arrow keys: up, down, left, right):
 const  left_direction =  37;
 const  up_direction  =  38;
