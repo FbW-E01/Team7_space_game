@@ -15,7 +15,7 @@ body {
     margin: 2vw auto;
     background-image: url(/images/space_background.jpg);
     background-size: cover;
-    border: solid 10px #f0e4e6b7;
+    border: solid 10px #fdf9fab7;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
   }
@@ -34,14 +34,14 @@ body {
   
   /* WORM STYLES */
   .wormBody {
-    background-color: #fd6401;
-    box-shadow: 0 0 5px #fd6401;
+    background-color: #0afb5b;
+    /* box-shadow: 0 0 5px #0afb5b; */
   }
   /* SPACE WORM STYLES END*/
   
   /* FOOD STYLES */
   .food {
-    background-color: #68e768;
+    background-color: #ffd000;
   }
   /* FOOD STYLES END*/
   
