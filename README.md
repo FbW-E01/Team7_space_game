@@ -145,8 +145,9 @@ MARIA:
    iii. No worm left behind you lose
    
    iv. You need more Cake
+   
+   v.  you have eaten X space cakes by travelling X light years
 
-   v. you have eaten X space cakes by travelling X light years
    ------------------------------
 
    bugs we found:
