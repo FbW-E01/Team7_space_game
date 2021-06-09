@@ -20,33 +20,31 @@ const gameBoard = document.getElementsByClassName("gameBoard");
 // WORM//
 
 
+gameBoard();
 
-
-
-
-
-
-/// CALL THE FOLLOWING FUNCTIONS TO RUN THE GAME:
-
-// Create game board pixels:
-GameBoard();
-
-// Create initial food:
 createFood();
 
-/* Move snake:
-var moveSnakeInterval = setInterval(moveSnake, 80);
 
-// Call change direction function on keyboard key-down event:
-addEventListener("keydown", e => changeDirection(e.keyCode));
+let wormInterval = setInterval(moveWorm, 80);
 
-// ON SCREEN CONTROLLERS:
+addEventListener("press keydown", e => changeDirection(e.keycode));
+
+// Control function //
+
 const leftButton = document.getElementById("leftButton");
 const rightButton = document.getElementById("rightButton");
 const upButton = document.getElementById("upButton");
 const downButton = document.getElementById("downButton");
 
-leftButton.onclick = () => changeDirection(LEFT_DIR);
-rightButton.onclick = () => changeDirection(RIGHT_DIR);
-upButton.onclick = () => changeDirection(UP_DIR);
-downButton.onclick = () => changeDirection(DOWN_DIR);/*/
+leftButton.onclick = () => changeDirection(left_direction);
+rightButton.onclick = () => changeDirection(right_direction);
+upButton.onclick = () => changeDirection(up_direction);
+downButton.onclick = () => changeDirection(down_direction);
+
+/// CALL THE FOLLOWING FUNCTIONS TO RUN THE GAME:
+
+// Create game board pixels:
+
+
+
+
