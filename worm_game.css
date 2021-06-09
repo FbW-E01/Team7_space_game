@@ -3,7 +3,17 @@ body {
     background-repeat: cover;
     text-align: center;
   }
+
+  /* font-family: 'Bungee Shade', cursive;
+  font-family: 'Faster One', cursive;
+  font-family: 'Monofett', cursive;
+  font-family: 'Press Start 2P', cursive; */
   
+  h1 {
+      color: rgb(255, 255, 255);
+      font-size: 1.8em;
+      font-family: 'Press Start 2P', cursive;
+  }
   /* GAME BOARD STYLES */
   #gameBox {
     /*
@@ -12,7 +22,7 @@ body {
       */
     width: 40vw;
     height: 40vw;
-    margin: 2vw auto;
+    margin: 1vw auto;
     background-image: url(/images/space_background.jpg);
     background-size: cover;
     border: solid 10px #fdf9fab7;
