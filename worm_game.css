@@ -13,13 +13,10 @@ body {
     width: 40vw;
     height: 40vw;
     margin: 2vw auto;
-    background-image: url(/images/max-mckinnon-c9OCWLka764-unsplash.jpg);
+    background-image: url(/images/space_background.jpg);
     background-size: cover;
-    border: solid 10px slategrey;
+    border: solid 10px #f0e4e6b7;
     border-radius: 10px;
-  
-    -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
     box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
   }
   
@@ -57,16 +54,14 @@ body {
   }
   
   .scoreBoard {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
     border-radius: 10px;
-    border: solid 5px slategrey;
-    color: dimgray;
-    background-color: #0c1021;
+    border: solid 5px #f0e4e6b7;
+    color: rgb(218, 213, 213);
     display: inline-block;
     padding: 1vw;
     width: 40%;
-  
-    -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
     box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
   }
   /* SCORE STYLES END */
