@@ -1,4 +1,4 @@
-gameBoard();
+makeGameBoard();
 
 createFood();
 

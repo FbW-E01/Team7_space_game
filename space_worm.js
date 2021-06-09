@@ -25,7 +25,7 @@ const  changeDirection  =  newDirectionCode  => {
 
 
 // Let the starting position of the space worm be at the middle of game board
-let  currentWormHeadPlace  =  799;
+let  currentWormHeadPlace  =  squareGameBoardCount / 2;
 let  wormLength  =  1000; // Initial length of the space worm = 1000
 
 // Move space worm continuously by calling this function repeatedly:
@@ -33,33 +33,33 @@ const  moveWorm  = () => {
     switch (wormCurrentDirection) {
         case  left_direction:
             --currentWormHeadPlace;
-            const  isWormHeadAtLastGameBoardTowardsLeft  = currentWormHeadPlace  %  40  ==  39  ||  currentWormHeadPlace  <  0;
+            const  isWormHeadAtLastGameBoardTowardsLeft =  currentWormHeadPlace % gameBoardCount == gameBoardCount - 1 ||  currentWormHeadPlace  <  0;
             if (isWormHeadAtLastGameBoardTowardsLeft) {
-                currentWormHeadPlace  =  currentWormHeadPlace  +  40;
+                currentWormHeadPlace  =  currentWormHeadPlace  + gameBoardCount; 
             }
             break;
 
         case  up_direction:
-            currentWormHeadPlace  =  currentWormHeadPlace  -  40;
+            currentWormHeadPlace  =  currentWormHeadPlace  -  gameBoardCount; 
             const  isWormHeadAtLastGameBoardTowardsUp  = currentWormHeadPlace  <  0;
             if (isWormHeadAtLastGameBoardTowardsUp) {
-                currentWormHeadPlace  =  currentWormHeadPlace  +  1600;
+                currentWormHeadPlace  =  currentWormHeadPlace  +  gameBoardCount;
             }
             break;
 
         case  right_direction :
             ++currentWormHeadPlace;
-            const  isWormHeadAtLastGameBoardTowardsRight  = currentWormHeadPlace  %  40  ==  0;
+            const  isWormHeadAtLastGameBoardTowardsRight  = currentWormHeadPlace  %  gameBoardCount  ==  0;
             if (isWormHeadAtLastGameBoardTowardsRight) {
-                currentWormHeadPlace  =  currentWormHeadPlace  -  40;
+                currentWormHeadPlace  =  currentWormHeadPlace  -  gameBoardCount;
             }
             break;
 
         case  down_direction:
-            currentWormHeadPlace  =  currentWormHeadPlace  +  40;
-            const  isWormHeadAtLastGameBoardTowardsDown  = currentWormHeadPlace  >  1599;
+            currentWormHeadPlace  =  currentWormHeadPlace  +  gameBoardCount;
+            const  isWormHeadAtLastGameBoardTowardsDown  = currentWormHeadPlace  >  squareGameBoardCount - 1;
             if (isWormHeadAtLastGameBoardTowardsDown) {
-                currentWormHeadPlace  =  currentWormHeadPlace  -  1600;
+                currentWormHeadPlace  =  currentWormHeadPlace  -  squareGameBoardCount;
             }
             break;
 
@@ -69,7 +69,7 @@ const  moveWorm  = () => {
     let  nextWormHeadPixel  = gameBox[currentWormHeadPlace];
 
     // Kill worm if it touches/bites itself:
-    if (nextWormHeadPixel.classList.contains("wormBodyPixel")) {
+    if (nextWormHeadPixel.classList.contains("wormBody")) {
         // Stop moving the space Worm. Use clearInterval() to stop the time
         clearInterval(moveWormInterval); 
         if (!alert(`You have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`))
@@ -77,12 +77,12 @@ const  moveWorm  = () => {
     }
 
     // If not killed "add" the worm body:
-    nextWormHeadPixel.classList.add("wormBodyPixel");
+    nextWormHeadPixel.classList.add("wormBody");
 
     // This function removes the space worm's body from the end of the worm as it moves.
     // Also note that space worm Length is used as the timeout interval
     setTimeout(() => {
-        nextWormHeadPixel.classList.remove("wormBodyPixel");
+        nextWormHeadPixel.classList.remove("wormBody");
     }, wormLength);
 
     // Update total distance travelled

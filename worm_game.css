@@ -24,7 +24,6 @@ body {
   }
   
   .gameBoard {
-    /* background-color: slategrey; */
     /*
       width and height of .gameBoard should 1/40 of the width and height of #gameBox,
       because it is used in calculation in the jscript.js file
@@ -37,7 +36,7 @@ body {
   /* GAME BOARD STYLES END*/
   
   /* WORM STYLES */
-  .wormBodyPixel {
+  .wormBody {
     background-color: #fd6401;
     box-shadow: 0 0 5px #fd6401;
   }
@@ -73,6 +72,54 @@ body {
   /* SCORE STYLES END */
   
   /* Hide #onScreenControllers on desktop */
-  #ScreenControllers {
+  #onScreenControllers {
     display: none;
+  }
+
+
+
+@media only screen and (max-width: 768px) {
+    /* MOBILE */
+    #gameBox {
+      width: 80vw;
+      height: 80vw;
+    }
+  
+    .gameBoard{
+      width: 2vw;
+      height: 2vw;
+    }
+  
+    #scoreContainer {
+      width: 80vw;
+    }
+  
+    #onScreenControllers {
+      width: 80vw;
+      margin: 5vw auto;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    #onScreenControllers > div {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    #onScreenControllers button {
+      background-color: transparent;
+      height: 20vw;
+      width: 20vw;
+      font-size: 10vw;
+      border: none;
+    }
+  
+    #onScreenControllers button:focus {
+      outline: none;
+    }
+  
+    #onScreenControllers button:active {
+      background-color: slategray;
+    }
   }
