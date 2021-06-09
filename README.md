@@ -126,8 +126,6 @@ MARIA:
    
    7* update trello screenshot and markdown in github
    
-   -----------
-   
    8* change food or/and worm visuals (perhaps emojis, different food types?)
    
    9* maybe obstacles -collision MAYBE
@@ -136,11 +134,15 @@ MARIA:
 
    ALERT Ideas:
 
-   1, You can always eat more !
-   2, Hey there more Cake in the universe you lose
-   3, Well super Worm done you win
-   4, No worm left behind you lose
-   5, You need more Cake
+   i. You can always eat more !
+
+   ii. Hey there more Cake in the universe you lose
+   
+   iii. Well super Worm done you win
+   
+   iii. No worm left behind you lose
+   
+   iv. You need more Cake
 
    ------------------------------
 
