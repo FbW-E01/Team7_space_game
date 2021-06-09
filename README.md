@@ -105,4 +105,57 @@ MARIA:
     -----------------------------------------------------------------------------------
 
 
+9th JUNE
+--------
 
+* finishing up individual code parts.
+
+* merged food.js and game_board.js. Current files game_board.js, game.js, space_worm.js
+
+*  1* title banner. 
+
+   2* change color scheme 
+
+   3* move score boards 
+   
+   4* change alert messages.
+   
+   5* slow down perhaps. 
+   
+   6* expand screen ? ---> not 
+   
+   7* update trello screenshot and markdown in github
+   
+   8* change food or/and worm visuals (perhaps emojis, different food types?)
+   
+   9* maybe obstacles -collision MAYBE
+
+   ------------------
+
+   ALERT Ideas:
+
+   i. You can always eat more !
+
+   ii. Hey there more Cake in the universe you lose
+   
+   iii. Well super Worm done you win
+   
+   iii. No worm left behind you lose
+   
+   iv. You need more Cake
+
+   ------------------------------
+
+   bugs we found:
+
+   1. conflicts in git, pulling and pushing
+
+   2. conflicts due to dividing game tasks, that required rather a common work, so naming conflict, etc...
+
+   3. problems to make the arrow keys of keyboard work
+
+   4. problems to make worm appear in screen.
+
+   -------------------------------
+
+   

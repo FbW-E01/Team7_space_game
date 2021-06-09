@@ -91,7 +91,7 @@ const  moveWorm  = () => {
 
     // If space worm bites the food /so head and food are at the same place):
     if (currentWormHeadPlace   ==  currentFoodPlace) {
-        // Update total food ate
+        // Update total food eaten
         foodEaten++;
         // Update in screen/UI: change the HTML content of total food eaten, with id="pointsEarned":
         document.getElementById("pointsEarned").innerHTML  =  foodEaten;
