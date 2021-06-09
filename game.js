@@ -3,7 +3,7 @@ makeGameBoard();
 createFood();
 
 
-let wormInterval = setInterval(moveWorm, 80);
+let moveWormInterval = setInterval(moveWorm, 80);
 
 addEventListener("press keydown", e => changeDirection(e.keycode));
 
