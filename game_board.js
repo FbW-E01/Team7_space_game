@@ -1,4 +1,6 @@
   // scoreboard//
+
+  
   let foodEaten = 0;
   let distanceTravelled = 0 
   
