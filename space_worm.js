@@ -1,6 +1,6 @@
 // Direction of space worm in the game board
 
-// Direction codes (Keyboard key codes for arrow keys):
+// Direction codes (Keyboard key codes for arrow keys: up, down, left, right):
 const  left_direction =  37;
 const  up_direction  =  38;
 const  right_direction  =  39;
@@ -28,7 +28,7 @@ const  changeDirection  =  newDirectionCode  => {
 let  currentWormHeadPlace  =  799;
 let  wormLength  =  1000; // Initial length of the space worm = 1000
 
-// Move space worm continuously by calling this function repeatedly :
+// Move space worm continuously by calling this function repeatedly:
 const  moveWorm  = () => {
     switch (wormCurrentDirection) {
         case  left_direction:
@@ -68,18 +68,18 @@ const  moveWorm  = () => {
     }
     let  nextWormHeadPixel  = gameBox[currentWormHeadPlace];
 
-    // Kill worm if it bites itself:
+    // Kill worm if it touches/bites itself:
     if (nextWormHeadPixel.classList.contains("wormBodyPixel")) {
-        // Stop moving the space Worm
-        clearInterval(moveWormInterval);
+        // Stop moving the space Worm. Use clearInterval() to stop the time
+        clearInterval(moveWormInterval); 
         if (!alert(`You have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`))
         window.location.reload();
     }
 
-    // If not killed add the worm body:
+    // If not killed "add" the worm body:
     nextWormHeadPixel.classList.add("wormBodyPixel");
 
-    // This function removes the space worm body from the end of the worm as it moves.
+    // This function removes the space worm's body from the end of the worm as it moves.
     // Also note that space worm Length is used as the timeout interval
     setTimeout(() => {
         nextWormHeadPixel.classList.remove("wormBodyPixel");
@@ -87,14 +87,14 @@ const  moveWorm  = () => {
 
     // Update total distance travelled
     totalDistanceTravelled++;
-    // Update in UI:
-    document.getElementById("blocksTravelled").innerHTML  = totalDistanceTravelled;
+    // Update in UI/screen:change the HTML content of total distance travelled, with id="blocksTravelled":
+    document.getElementById("blocksTravelled").innerHTML  = totalDistanceTravelled; 
 
-    // If space worm bites the food:
+    // If space worm bites the food /sohead and food are at the same place):
     if (currentWormHeadPlace   ==  currentFoodPlace) {
         // Update total food ate
         totalFoodAte++;
-        // Update in UI:
+        // Update in screen/UI: change the HTML content of total food eaten, with id="pointsEarned":
         document.getElementById("pointsEarned").innerHTML  =  totalFoodAte;
         // Increase Space worm length:
         wormLength  =  wormLength  +  100;

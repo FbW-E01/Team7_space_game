@@ -1,18 +1,20 @@
 body {
-    background-color: darkslategrey;
+    background-image: url(/images/alexander-andrews-fsH1KjbdjE8-unsplash.jpg);
+    background-repeat: cover;
     text-align: center;
   }
   
   /* GAME BOARD STYLES */
   #gameBox {
     /*
-      width and height of .gameBoardPixel should 1/40 of the width and height of #gameBox,
+      width and height of .gameBoard should 1/40 of the width and height of #gameBox,
       because it is used in calculation in the .js file
       */
     width: 40vw;
     height: 40vw;
     margin: 2vw auto;
-    background-color: #0c1021;
+    background-image: url(/images/max-mckinnon-c9OCWLka764-unsplash.jpg);
+    background-size: cover;
     border: solid 10px slategrey;
     border-radius: 10px;
   
