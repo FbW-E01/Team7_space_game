@@ -71,7 +71,7 @@ const  moveWorm  = () => {
     if (nextWormHeadPixel.classList.contains("wormBody")) {
         // Stop moving the space Worm. Use clearInterval() to stop the time
         clearInterval(moveWormInterval); 
-        if (!alert(`I like Cake  ${foodEaten} light years  ${distanceTravelled} blocks.`))
+        if (!alert(`You have eaten ${foodEaten} space cakes by travelling ${distanceTravelled} light years.`))
         window.location.reload();
     }
 
