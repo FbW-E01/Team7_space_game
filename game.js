@@ -5,7 +5,6 @@ createFood();
 
 createblackhole();
 
-popWorm();
 
 
 let moveWormInterval = setInterval(moveWorm, 60);
