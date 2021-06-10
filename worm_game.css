@@ -2,6 +2,7 @@ body {
     background-image: url(/images/alexander-andrews-fsH1KjbdjE8-unsplash.jpg);
     background-repeat: cover;
     text-align: center;
+    margin: 0;
   }
 
   /* font-family: 'Bungee Shade', cursive;
@@ -11,8 +12,9 @@ body {
   
   h1 {
       color: rgb(255, 255, 255);
-      font-size: 1.8em;
+      font-size: 2em;
       font-family: 'Press Start 2P', cursive;
+      margin-bottom: 0;
   }
   /* GAME BOARD STYLES */
   #gameBox {
@@ -22,7 +24,7 @@ body {
       */
     width: 40vw;
     height: 40vw;
-    margin: 1vw auto;
+    margin: 0.7vw auto;
     background-image: url(/images/space_background.jpg);
     background-size: cover;
     border: solid 4px #fdf9fab7;
@@ -81,13 +83,61 @@ body {
     border: solid 5px #f0e4e6b7;
     color: rgb(218, 213, 213);
     display: inline-block;
-    padding: 1vw;
+    padding: 0.8vw;
     width: 40%;
     box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
   }
   /* SCORE STYLES END */
+
+/* POP-OVER WORM */
+.playGame {
+    color: white; 
+    font-family:'Press Start 2P', cursive;
+    padding-top: 10px;
+    font-size: 0.8em;
+
+}
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 20vw;
+    line-height: 40px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content:url(./images/green_worm_favicon.png);
+  }
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeOut 1s;
+  }
+  /* Add animation (fade in the popup) */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+/* END OF POP-OVER */
+    
   
-  /* Hide #onScreenControllers on desktop */
+/* Hide #onScreenControllers on desktop and show on mobile version*/
   #onScreenControllers {
     display: none;
   }

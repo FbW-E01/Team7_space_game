@@ -25,7 +25,7 @@ const  changeDirection  =  newDirection  => {
 // Let the starting position of the space worm be at the middle of game board
 let  currentWormHeadPlace  =  squareGameBoardCount / 2;
 
-let  wormLength  =  100; // Initial length of the space worm = 100
+let  wormLength  =  200; // Initial length of the space worm = 100
 
 // Move space worm continuously by calling this function repeatedly:
 const  moveWorm  = () => {
