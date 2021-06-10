@@ -50,7 +50,7 @@ const createblackhole = () => {
   gameBoard[blackholePlaceNow].classList.add("blackhole"); //--> in this case to add "food"
 };
 
-
+//POP OVER WORM
 
 function popWorm() {
   var popup = document.getElementById("myPopup");

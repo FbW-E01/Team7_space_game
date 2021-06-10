@@ -36,12 +36,10 @@
     // Let the starting position of the space worm be at the middle of game board
     let currentWormHeadPlace = squareGameBoardCount / 2;
 
-    let wormLength = 500; // Initial length of the space worm = 1000
+    let wormLength = 200; // Initial length of the space worm = 1000
 
-let  wormLength  =  200; // Initial length of the space worm = 100
-
-// Move space worm continuously by calling this function repeatedly:
-const  moveWorm  = () => {
+    // Move space worm continuously by calling this function repeatedly:
+    const moveWorm = () => {
     switch (wormCurrentDirection) {
         case left_direction:
         --currentWormHeadPlace;
@@ -132,5 +130,5 @@ const  moveWorm  = () => {
         createFood();
         createblackhole();
     }
-};
+    };
 
