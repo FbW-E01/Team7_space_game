@@ -72,7 +72,7 @@ const  moveWorm  = () => {
         // Stop moving the space Worm. Use clearInterval() to stop the time
         clearInterval(moveWormInterval); 
         if (!alert(`You have eaten ${foodEaten} space cakes by travelling ${distanceTravelled} light years.`))
-        window.location.reset();
+        window.location.reload();
     }
 
    // Kill worm if it touches the blackhole:
