@@ -4,14 +4,13 @@ body {
     text-align: center;
     margin: 0;
   }
-
   
-  h1 {
-      color: rgb(255, 255, 255);
-      font-size: 2em;
-      font-family: 'Press Start 2P', cursive;
-      margin-bottom: 0;
-  }
+h1 {
+     color: rgb(255, 255, 255);
+     font-size: 2em;
+     font-family: 'Press Start 2P', cursive;
+     margin-bottom: 0;
+ }
   /* GAME BOARD STYLES */
   #gameBox {
     /*
