@@ -30,9 +30,9 @@ body {
     box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
   }
   
-  .tile{
+  .tile {
     padding:2em;
-    color:rgb(218, 213, 213);
+    color:rgb(218, 213, 217);
   }
   .gameBoard {
     /*
@@ -58,6 +58,13 @@ body {
     background-color: #ffd000;
   }
   /* FOOD STYLES END*/
+
+ /* BLACK HOLE STYLES */
+ .blackhole {
+    background-color: #000000;
+    box-shadow: 0 0 20px #ffd000;
+   }
+  /* BLACK HOLE  STYLES END*/
   
   /* SCORE STYLES */
   #scoreContainer {
@@ -129,6 +136,6 @@ body {
     }
   
     #onScreenControllers button:active {
-      background-color: slategray;
+      background-color: #f0e4e6b7;
     }
   }

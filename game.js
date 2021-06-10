@@ -3,8 +3,10 @@ makeGameBoard();
 
 createFood();
 
+createblackhole();
 
-let moveWormInterval = setInterval(moveWorm, 40);
+
+let moveWormInterval = setInterval(moveWorm, 60);
 
 
 const checkKey = e => changeDirection(e.keyCode);

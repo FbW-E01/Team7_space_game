@@ -25,7 +25,7 @@ const  changeDirection  =  newDirection  => {
 // Let the starting position of the space worm be at the middle of game board
 let  currentWormHeadPlace  =  squareGameBoardCount / 2;
 
-let  wormLength  =  500; // Initial length of the space worm = 1000
+let  wormLength  =  100; // Initial length of the space worm = 100
 
 // Move space worm continuously by calling this function repeatedly:
 const  moveWorm  = () => {
@@ -72,8 +72,18 @@ const  moveWorm  = () => {
         // Stop moving the space Worm. Use clearInterval() to stop the time
         clearInterval(moveWormInterval); 
         if (!alert(`You have eaten ${foodEaten} space cakes by travelling ${distanceTravelled} light years.`))
-        window.location.reload();
+        window.location.reset();
     }
+
+   // Kill worm if it touches the blackhole:
+   if (nextWormHeadPixel.classList.contains("blackhole")) {
+    // Stop moving the space Worm. Use clearInterval() to stop the time
+    clearInterval(moveWormInterval); 
+    if (!alert(`BLACK HOLE!! You have travelled to another dimension. You have eaten ${foodEaten} space cakes by travelling ${distanceTravelled} light years.`))
+    window.location.reload();
+}
+
+
 
     // If not killed "add" the worm body:
     nextWormHeadPixel.classList.add("wormBody");
@@ -99,5 +109,7 @@ const  moveWorm  = () => {
         wormLength  =  wormLength  +  100;
         // Create new food:
         createFood();
+        createblackhole();
     }
 };
+
