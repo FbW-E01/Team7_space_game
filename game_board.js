@@ -1,18 +1,17 @@
 // Create game board pixels:
-
-const gameBoardCount = 40;
-const squareGameBoardCount = Math.pow(gameBoardCount, 2);
+const gameBoardPixelCount = 40;
+const squareBoardPixelCount = Math.pow(gameBoardPixelCount, 2);
 
 // scoreboard//
-  let foodEaten = 0;
-  let distanceTravelled = 0 
-  
- /// Game build///
-const gameBox = document.getElementById ("gameBox");
+let foodEaten = 0;
+let distanceTravelled = 0;
+
+/// Game build///
+const gameBox = document.getElementById("gameBox");
 
 const makeGameBoard = () => {
 
-  for (let i = 1; i <= squareGameBoardCount; ++i)  {
+  for (let i = 1; i <= squareBoardPixelCount; ++i) {
     gameBox.innerHTML = `${gameBox.innerHTML} <div class="gameBoard" id="pixel${i}"></div>`;
   }
 };
@@ -30,7 +29,7 @@ const createFood = () => {
   // Create new food
   currentFoodPlace = Math.random();
   currentFoodPlace = Math.floor(
-    currentFoodPlace * squareGameBoardCount
+    currentFoodPlace * squareBoardPixelCount
   );
   gameBoard[currentFoodPlace].classList.add("food"); //--> in this case to add "food"
 };
@@ -45,7 +44,7 @@ const createblackhole = () => {
   // Create new food
   blackholePlaceNow = Math.random();
   blackholePlaceNow = Math.floor(
-  blackholePlaceNow * squareGameBoardCount
+    blackholePlaceNow * squareBoardPixelCount
   );
   gameBoard[blackholePlaceNow].classList.add("blackhole"); //--> in this case to add "food"
 };
@@ -53,8 +52,6 @@ const createblackhole = () => {
 //POP OVER WORM
 
 function popWorm() {
-  var popup = document.getElementById("myPopup");
+  let popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
-  }
-
-
+}
