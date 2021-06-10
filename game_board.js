@@ -35,8 +35,38 @@ const createFood = () => {
   gameBoard[currentFoodPlace].classList.add("food"); //--> in this case to add "food"
 };
 
+//OBSTACLE BLACKHOLE
+
+let blackholePlaceNow = 0; // Initially set to 0
+const createblackhole = () => {
+  // Remove previous food;
+  gameBoard[blackholePlaceNow].classList.remove("blackhole"); //read-only property that returns a live DOMTokenList collection of the class attributes of the element, can then be used to manipulate the class list ---> in this case to remove a "food""
+
+  // Create new food
+  blackholePlaceNow = Math.random();
+  blackholePlaceNow = Math.floor(
+  blackholePlaceNow * squareGameBoardCount
+  );
+  gameBoard[blackholePlaceNow].classList.add("blackhole"); //--> in this case to add "food"
+};
+
+var myGamePiece;
+var myObstacles = [];
+var mySound;
+var myMusic;
+
+function startGame() {
+  myGamePiece = new component(30, 30, "red", 10, 120);
+  mySound = new sound("bounce.mp3");
+  myMusic = new sound("gametheme.mp3");
+  myMusic.play();
+  myGameArea.start();
+}
 
 
-
+function popWorm() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+  }
 
 

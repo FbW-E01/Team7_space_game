@@ -38,8 +38,15 @@
 
     let wormLength = 500; // Initial length of the space worm = 1000
 
+<<<<<<< HEAD
     // Move space worm continuously by calling this function repeatedly:
     const moveWorm = () => {
+=======
+let  wormLength  =  200; // Initial length of the space worm = 100
+
+// Move space worm continuously by calling this function repeatedly:
+const  moveWorm  = () => {
+>>>>>>> 979d537e137dd04cfeaff9d8f0455491fd26acce
     switch (wormCurrentDirection) {
         case left_direction:
         --currentWormHeadPlace;
@@ -94,6 +101,16 @@
         window.location.reload();
     }
 
+   // Kill worm if it touches the blackhole:
+   if (nextWormHeadPixel.classList.contains("blackhole")) {
+    // Stop moving the space Worm. Use clearInterval() to stop the time
+    clearInterval(moveWormInterval); 
+    if (!alert(`BLACK HOLE!! You have travelled to another dimension. You have eaten ${foodEaten} space cakes by travelling ${distanceTravelled} light years.`))
+    window.location.reload();
+}
+
+
+
     // If not killed "add" the worm body:
     nextWormHeadPixel.classList.add("wormBody");
 
@@ -118,6 +135,11 @@
         wormLength = wormLength + 100;
         // Create new food:
         createFood();
+        createblackhole();
     }
+<<<<<<< HEAD
     };
+=======
+};
+>>>>>>> 979d537e137dd04cfeaff9d8f0455491fd26acce
 

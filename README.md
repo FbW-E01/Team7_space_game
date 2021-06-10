@@ -162,4 +162,13 @@ MARIA:
 
    -------------------------------
 
+
+
+10th JUNE
+--------
    
+to do:
+
+1. collision detection, creating obstacles and consequence. Created a new class "blackhole" and add it randomly: so every time a piece of food is eaten the backhole is also repositioned randomly in the gameboard. I the space worm hits the black hole, game over.
+
+2. working on alerts
