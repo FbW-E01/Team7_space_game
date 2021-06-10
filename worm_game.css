@@ -57,10 +57,10 @@ h1 {
   /* FOOD STYLES END*/
 
  /* BLACK HOLE STYLES */
- .blackhole {
+  .blackhole {
     background-color: #000000;
     box-shadow: 0 0 20px #ffd000;
-   }
+  }
   /* BLACK HOLE  STYLES END*/
   
   /* SCORE STYLES */

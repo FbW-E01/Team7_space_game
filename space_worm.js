@@ -103,6 +103,58 @@
         }
 
 
+<<<<<<< HEAD
+=======
+    // Kill worm if it touches/bites itself:
+    if (nextWormHeadPixel.classList.contains("wormBody")) {
+        // Stop moving the space Worm. Use clearInterval() to stop the time
+        clearInterval(moveWormInterval);
+        if (
+        !alert(
+            `You have eaten ${foodEaten} space cakes by travelling ${distanceTravelled} light years.`
+        )
+        )
+        window.location.reload();
+    }
+
+   // Kill worm if it touches the blackhole:
+    if (nextWormHeadPixel.classList.contains("blackhole")) {
+    // Stop moving the space Worm. Use clearInterval() to stop the time
+    clearInterval(moveWormInterval); 
+    if (!alert(`BLACK HOLE!! You have travelled to another dimension. You have eaten ${foodEaten} space cakes by travelling ${distanceTravelled} light years.`))
+    window.location.reload();
+}
+
+
+
+    // If not killed "add" the worm body:
+    nextWormHeadPixel.classList.add("wormBody");
+
+    // This function removes the space worm's body from the end of the worm as it moves.
+    // Also note that space worm Length is used as the timeout interval
+    setTimeout(() => {
+        nextWormHeadPixel.classList.remove("wormBody");
+    }, wormLength);
+
+    // Update total distance travelled
+    distanceTravelled++;
+    // Update in UI/screen:change the HTML content of total distance travelled, with id="blocksTravelled":
+    document.getElementById("blocksTravelled").innerText = distanceTravelled;
+
+    // If space worm bites the food /so head and food are at the same place):
+    if (currentWormHeadPlace == currentFoodPlace) {
+        // Update total food eaten
+        foodEaten++;
+        // Update in screen/UI: change the HTML content of total food eaten, with id="pointsEarned":
+        document.getElementById("pointsEarned").innerHTML = foodEaten;
+        // Increase Space worm length:
+        wormLength = wormLength + 100;
+        // Create new food:
+        createFood();
+        createblackhole();
+    }
+    };
+>>>>>>> 929e0ab66e674c552160a8f76e3e8ae8a30f7771
 
         // If not killed "add" the worm body:
         nextWormHeadPixel.classList.add("wormBody");
