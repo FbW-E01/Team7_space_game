@@ -5,8 +5,11 @@ createFood();
 
 createblackhole();
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 979d537e137dd04cfeaff9d8f0455491fd26acce
 let moveWormInterval = setInterval(moveWorm, 60);
 
 
