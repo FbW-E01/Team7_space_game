@@ -186,3 +186,6 @@ done:
 7. Images are free use but authors credit added.
 
 8. Screenshot of our trello working board.
+
+![image info](work_record/game_player1_testing.png)
+![image info](work_record/game_work_plan.jpg)
