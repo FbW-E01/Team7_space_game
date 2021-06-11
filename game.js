@@ -5,8 +5,8 @@ createFood();
 
 createblackhole();
 
-let moveWormInterval = setInterval(moveWorm, 60); 
-
+let speed= 100;
+let moveWormInterval = setInterval(moveWorm, speed); 
 
 const checkKey = e => changeDirection(e.keyCode); // to connect keys-keyboard arrows
 document.onkeydown = checkKey;
@@ -22,5 +22,6 @@ leftButton.onclick = () => changeDirection (left_direction);
 rightButton.onclick = () => changeDirection (right_direction);
 upButton.onclick = () => changeDirection (up_direction);
 downButton.onclick = () => changeDirection (down_direction);
+
 
 

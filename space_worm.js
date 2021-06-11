@@ -98,7 +98,11 @@
         if (nextWormHeadPixel.classList.contains("blackhole")) {
             // Stop moving the space Worm. Use clearInterval() to stop the time
             clearInterval(moveWormInterval);
-            if (!alert(`BLACK HOLE!! You have travelled to another dimension. You have eaten ${foodEaten} space cakes by travelling ${distanceTravelled} light years.`))
+            if (
+                !alert(
+                    `BLACK HOLE!! You have travelled to another dimension. You have eaten ${foodEaten} space cakes by travelling ${distanceTravelled} light years.`
+                )
+            )
                 window.location.reload();
         }
 
@@ -127,35 +131,23 @@
             wormLength = wormLength + 100;
             // Create new food:
             createFood();
+            //create new blackhole (position):
             createblackhole();
         }
-    };
+         //speed accelerates as space worm eats food. once eaten 50 speeds goes to 60. Initial speed is 100
+        if (foodEaten >= 50 && foodEaten < 100) {
+            clearInterval(moveWormInterval);
+            moveWormInterval = setInterval(moveWorm, speed - 40);
+              }
 
-    // If not killed "add" the worm body:
-    nextWormHeadPixel.classList.add("wormBody");
+        if (foodEaten >= 100 && foodEaten < 200) {
+           clearInterval(moveWormInterval);
+           moveWormInterval = setInterval(moveWorm, speed - 80);
+             }
 
-    // This function removes the space worm's body from the end of the worm as it moves.
-    // Also note that space worm Length is used as the timeout interval
-    setTimeout(() => {
-        nextWormHeadPixel.classList.remove("wormBody");
-    }, wormLength);
-
-    // Update total distance travelled
-    distanceTravelled++;
-    // Update in UI/screen:change the HTML content of total distance travelled, with id="blocksTravelled":
-    document.getElementById("blocksTravelled").innerText = distanceTravelled;
-
-    // If space worm bites the food /so head and food are at the same place):
-    if (wormHeadPlaceNow == currentFoodPlace) {
-        // Update total food eaten
-        foodEaten++;
-        // Update in screen/UI: change the HTML content of total food eaten, with id="pointsEarned":
-        document.getElementById("pointsEarned").innerHTML = foodEaten;
-        // Increase Space worm length:
-        wormLength = wormLength + 100;
+        if (foodEaten >= 200) {
+        clearInterval(moveWormInterval);
+        moveWormInterval = setInterval(moveWorm, speed - 99);
+          }
         
-        // Create new food:
-        createFood();
-        // create new black-hole
-        createblackhole();
-    }
+    };

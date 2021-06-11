@@ -148,6 +148,8 @@ MARIA:
    
    v.  you have eaten X space cakes by travelling X light years
 
+   vi. BLACK HOLE!! You have travelled to another dimension. You have eaten X space cakes by travelling X light years.
+
    ------------------------------
 
    bugs we found:
@@ -167,8 +169,20 @@ MARIA:
 10th JUNE
 --------
    
-to do:
+done:
 
-1. collision detection, creating obstacles and consequence. Created a new class "blackhole" and add it randomly: so every time a piece of food is eaten the backhole is also repositioned randomly in the gameboard. I the space worm hits the black hole, game over.
+1. BLACK HOLE obstacle: collision detection, creating obstacles and consequence. Created a new class "blackhole" and add it randomly: so every time a piece of food is eaten the backhole is also repositioned randomly in the gameboard. There is always 1 blackhole like there is always 1 food, and in theory they could be in the same place! If the space worm hits the black hole, game over. SO it clears the  original setINterval with clearInterval(moveWormInterval) and prints and alert with space food eaten and light years travelled.
 
-2. working on alerts
+2. We have 2 types of alert, a.) when worm is killed by eating its own tail or hitting the gameboard limits (top of gameboard) and b). by entering a black hole.
+
+3. wormLength:  Original length of space worm, set to 200  (equivalent to 2 worm rings) and grows as it eats.
+
+4. Speed: setInterval has set an initial speed = 100. THere are if statements to add conditions, so if space worm eats 50 food, speed increases (in our case speed goes -40), after eating other 50 => 100, speed accelerates -40 more (so speed -80), etc...
+
+5. Greetings button: added an alien emoji that is invited to be clicked, on click it shows a green worm coming out of game board with message: "may the worms be with you"
+
+6. Game testing on going: testing game on people and providing screen shots of scores.
+
+7. Images are free use but authors credit added.
+
+8. Screenshot of our trello working board.
