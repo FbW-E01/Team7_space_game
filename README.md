@@ -187,5 +187,6 @@ done:
 
 8. Screenshot of our trello working board.
 
-![image info](work_record/game_player1_testing.png)
 ![image info](work_record/game_work_plan.jpg)
+
+![image info](work_record/game_player1_testing.png)
