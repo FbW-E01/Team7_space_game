@@ -187,6 +187,8 @@ done:
 
 8. Screenshot of our trello working board.
 
+9. Fixed bugs for mobile version and github pages
+
 
  ![image info](work_record/game_work_plan.jpg)  
  
