@@ -1,5 +1,5 @@
 body {
-    background-image: url(/images/alexander-andrews-fsH1KjbdjE8-unsplash.jpg);
+    background-image: url(images/alexander-andrews-fsH1KjbdjE8-unsplash.jpg);
     background-repeat: cover;
     text-align: center;
     margin: 0;
@@ -21,7 +21,7 @@ h1 {
     width: 40vw;
     height: 40vw;
     margin: 0.7vw auto;
-    background-image: url(/images/space_background.jpg);
+    background-image: url(images/space_background.jpg);
     background-size: cover;
     border: solid 4px #fdf9fab7;
     border-radius: 10px;
@@ -150,6 +150,13 @@ h1 {
 
 @media only screen and (max-width: 768px) {
     /* MOBILE */
+
+    h1 {
+      color: rgb(255, 255, 255);
+      font-size: 0.8em;
+      font-family: 'Press Start 2P', cursive;
+      margin-bottom: 0;
+  }
     #gameBox {
       width: 80vw;
       height: 80vw;
@@ -162,6 +169,14 @@ h1 {
   
     #scoreContainer {
       width: 80vw;
+    }
+    .scoreBoard {
+      font-size: 15px;
+      padding: 5px;
+      margin: 5px;
+    }
+    .alienGreetings, .popup {
+      display: none;
     }
   
     #onScreenControllers {
