@@ -147,9 +147,9 @@ h1 {
   }
 
 
-
+ /* MOBILE */
 @media only screen and (max-width: 768px) {
-    /* MOBILE */
+   
 
     h1 {
       color: rgb(255, 255, 255);
@@ -170,11 +170,13 @@ h1 {
     #scoreContainer {
       width: 80vw;
     }
+
     .scoreBoard {
       font-size: 15px;
       padding: 5px;
       margin: 5px;
     }
+
     .alienGreetings, .popup {
       display: none;
     }
@@ -211,4 +213,4 @@ h1 {
     #onScreenControllers button:active {
       background-color: #f0e4e6b7;
     }
-  }
+}
