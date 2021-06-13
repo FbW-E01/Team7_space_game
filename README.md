@@ -197,3 +197,5 @@ done:
 ![image info](work_record/game_player2_testing.png)
 
 ![image info](work_record/space_worm_greetings.png)
+
+![image info](work_record/game_mobile.jpg)
