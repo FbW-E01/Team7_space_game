@@ -178,10 +178,14 @@ h1 {
     .alienGreetings, .popup {
       display: none;
     }
-  
+
+    .controllersScoresContainer {
+        margin: auto;
+    }
+
     #onScreenControllers {
       width: 80vw;
-      margin: 5vw auto;
+      margin: auto;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
