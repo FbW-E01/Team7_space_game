@@ -175,9 +175,9 @@ done:
 
 2. We have 2 types of alert, a.) when worm is killed by eating its own tail or hitting the gameboard limits (top of gameboard) and b). by entering a black hole.
 
-3. wormLength:  Original length of space worm, set to 200  (equivalent to 2 worm rings) and grows as it eats.
+3. wormLength:  Original length of space worm, set to 300  (equivalent to 3 worm rings) and grows as it eats.
 
-4. Speed: setInterval has set an initial speed = 100. THere are if statements to add conditions, so if space worm eats 50 food, speed increases (in our case speed goes -40), after eating other 50 => 100, speed accelerates -40 more (so speed -80), etc...
+4. Speed: setInterval has set an initial speed = 100. THere are if statements to add conditions, so if space worm eats 50 food, speed increases (in our case speed goes -20), after eating other 50 => 100, speed accelerates -20 more (so speed -40), etc...
 
 5. Greetings button: added an alien emoji that is invited to be clicked, on click it shows a green worm coming out of game board with message: "may the worms be with you"
 
