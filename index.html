@@ -34,17 +34,20 @@
 
     <!-- #scoreContainer contains the scores  -->
     <div id="scoreContainer">
-    <div class="scoreBoard">SPACE CAKES: <span id="pointsEarned">🍓 🍰</span></div> 
-    <div class="popup" onclick="popWorm()" style="font-size: 2em;">👽 
-        <span class="popuptext" id="myPopup">MAY THE WORMS BE WITH YOU!</span>
-    </div>
-    <div class="scoreBoard">LIGHT YEARS: <span id="blocksTravelled">	🛸</span></div>
-    </div>
-    <div class="alienGreetings">CLICK ME!  
-        <div class= "credits">
-            image credit: Ivana Cajina & Alexander Andrews. Worm by: Sandytov
+        <div class="scoreBoard">SPACE CAKES: <span id="pointsEarned">🍓 🍰</span></div> 
+        <div class="popup" onclick="popWorm();play();" style="font-size: 2em;">👽 
+            <span class="popuptext" id="myPopup">MAY THE WORMS BE WITH YOU!</span>
         </div>
-    </div>
-   </div>
-</body>
+        <div class="scoreBoard">LIGHT YEARS: <span id="blocksTravelled">	🛸</span></div>
+        </div>
+        <div class="alienGreetings">CLICK ME!  
+            <div class= "credits">
+                image credit: Ivana Cajina & Alexander Andrews. Worm by: Sandytov
+            </div>
+        </div>
+       </div>
+       <audio id="popOverSound" >
+        <source src="sound/space shield sound.wav">
+    </audio>
+    </body>
 </html>

@@ -189,6 +189,8 @@ done:
 
 9. Fixed bugs for mobile version and github pages
 
+10. Added sound effect to onclick event, the worm pop-over, so when you click it shows the worm, the message and plays a little sound.
+
 
  ![image info](work_record/game_work_plan.jpg)  
  
