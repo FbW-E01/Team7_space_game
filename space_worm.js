@@ -24,7 +24,7 @@ const changeDirection = (newDirection) => {
 };
 
 // Let the starting position of the space worm be at the middle of game board
-let ormHeadPlaceNow = squareBoardPixelCount / 2;
+let wormHeadPlaceNow = squareBoardPixelCount / 2;
 
 let wormLength = 300; // Initial length of the space worm = 300
 
