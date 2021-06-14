@@ -1,46 +1,37 @@
-    // Direction codes (Keyboard key codes for arrow keys: up, down, left, right):
-    const left_direction = 37;
-    const up_direction = 38;
-    const right_direction = 39;
-    const down_direction = 40;
+// Direction codes (Keyboard key codes for arrow keys: up, down, left, right):
+const left_direction = 37;
+const up_direction = 38;
+const right_direction = 39;
+const down_direction = 40;
+// Set space worm direction initially to right
+let wormDirectionNow = right_direction;
 
-    // Set space worm direction initially to right
-    let wormDirectionNow = right_direction;
+const changeDirection = (newDirection) => {
+      // Change the direction of the space worm
+      if (newDirection == wormDirectionNow) return;
+      if (newDirection == left_direction && wormDirectionNow != right_direction) {
+          wormDirectionNow = newDirection;
+      } else if (
+          newDirection == up_direction && wormDirectionNow != down_direction) {
+          wormDirectionNow = newDirection;
+      } else if (
+          newDirection == right_direction && wormDirectionNow != left_direction) {
+          wormDirectionNow = newDirection;
+      } else if (
+          newDirection == down_direction && wormDirectionNow != up_direction) {
+          wormDirectionNow = newDirection;
+      }
+};
 
-    const changeDirection = (newDirection) => {
-        // Change the direction of the space worm
-        if (newDirection == wormDirectionNow) return;
-        if (
-            newDirection == left_direction &&
-            wormDirectionNow != right_direction
-        ) {
-            wormDirectionNow = newDirection;
-        } else if (
-            newDirection == up_direction &&
-            wormDirectionNow != down_direction
-        ) {
-            wormDirectionNow = newDirection;
-        } else if (
-            newDirection == right_direction &&
-            wormDirectionNow != left_direction
-        ) {
-            wormDirectionNow = newDirection;
-        } else if (
-            newDirection == down_direction &&
-            wormDirectionNow != up_direction
-        ) {
-            wormDirectionNow = newDirection;
-        }
-    };
+// Let the starting position of the space worm be at the middle of game board
+let ormHeadPlaceNow = squareBoardPixelCount / 2;
 
-    // Let the starting position of the space worm be at the middle of game board
-    let wormHeadPlaceNow = squareBoardPixelCount / 2;
+let wormLength = 300; // Initial length of the space worm = 300
 
-    let wormLength = 300; // Initial length of the space worm = 300
+// Move space worm continuously by calling this function repeatedly:
+const moveWorm = () => {
+       switch (wormDirectionNow) {
 
-    // Move space worm continuously by calling this function repeatedly:
-    const moveWorm = () => {
-        switch (wormDirectionNow) {
             case left_direction:
                 --wormHeadPlaceNow;
                 const wormHeadLastGameLeftDir =
@@ -58,7 +49,7 @@
                     wormHeadPlaceNow = wormHeadPlaceNow + gameBoardPixelCount;
                 }
                 break;
-
+    
             case right_direction:
                 ++wormHeadPlaceNow;
                 const wormHeadLastGameRightDir =
@@ -76,9 +67,11 @@
                     wormHeadPlaceNow = wormHeadPlaceNow - squareBoardPixelCount;
                 }
                 break;
-
+    
             default:
+    
                 break;
+
         }
         let nextWormHeadPixel = gameBoard[wormHeadPlaceNow];
 
@@ -133,8 +126,8 @@
              }
 
         if (foodEaten >= 200) {
-        clearInterval(moveWormInterval);
-        moveWormInterval = setInterval(moveWorm, speed - 60);
-          }
+          clearInterval(moveWormInterval);
+          moveWormInterval = setInterval(moveWorm, speed - 60);
+            }
         
-    };
+};
