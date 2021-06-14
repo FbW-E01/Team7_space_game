@@ -57,7 +57,8 @@ function popWorm() {
 }
 
 // SOUND ON POP OVER WORM
-let audio = document.getElementById('popOverSound'); 
-function play(){     
-  audio.play() 
+ let audio = document.getElementById('popOverSound'); 
+ function play(){     
+   audio.play() 
 }
+  
