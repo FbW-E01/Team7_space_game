@@ -1,11 +1,11 @@
-    // Direction codes (Keyboard key codes for arrow keys: up, down, left, right):
-    const left_direction = 37;
-    const up_direction = 38;
-    const right_direction = 39;
-    const down_direction = 40;
+// Direction codes (Keyboard key codes for arrow keys: up, down, left, right):
+const left_direction = 37;
+const up_direction = 38;
+const right_direction = 39;
+const down_direction = 40;
 
-    // Set space worm direction initially to right
-    let wormDirectionNow = right_direction;
+// Set space worm direction initially to right
+let wormDirectionNow = right_direction;
 
     const changeDirection = (newDirection) => {
         // Change the direction of the space worm
@@ -138,4 +138,4 @@
         moveWormInterval = setInterval(moveWorm, speed - 60);
           }
         
-    };
+};
