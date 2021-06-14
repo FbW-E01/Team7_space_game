@@ -39,14 +39,14 @@ const createFood = () => {
 let blackholePlaceNow = 0; // Initially set to 0
 const createblackhole = () => {
   // Remove previous food;
-  gameBoard[blackholePlaceNow].classList.remove("blackhole"); //read-only property that returns a live DOMTokenList collection of the class attributes of the element, can then be used to manipulate the class list ---> in this case to remove a "food""
+  gameBoard[blackholePlaceNow].classList.remove("blackhole"); //read-only property that returns a live DOMTokenList collection of the class attributes of the element, can then be used to manipulate the class list ---> in this case to remove a "blackhole"
 
   // Create new food
   blackholePlaceNow = Math.random();
   blackholePlaceNow = Math.floor(
     blackholePlaceNow * squareBoardPixelCount
   );
-  gameBoard[blackholePlaceNow].classList.add("blackhole"); //--> in this case to add "food"
+  gameBoard[blackholePlaceNow].classList.add("blackhole"); //--> in this case to add "blackhole"
 };
 
 //POP OVER WORM
